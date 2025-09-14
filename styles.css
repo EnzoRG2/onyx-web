@@ -674,10 +674,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Technologies Section */
 .technologies {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
-    overflow: hidden;
 }
 
 .technologies::before {
@@ -687,24 +686,24 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
 }
 
 .technologies .section-header h2 {
-    color: #fff;
+    color: #333;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .technologies .section-header p {
-    color: #b8b8b8;
+    color: #666;
     font-size: 1.2rem;
 }
 
 .technologies-showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
     position: relative;
@@ -712,11 +711,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
 }
@@ -724,12 +723,12 @@ h1, h2, h3, h4, h5, h6 {
 .tech-card:hover {
     transform: translateY(-10px) scale(1.02);
     border-color: #D4AF37;
-    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
 }
 
 .tech-card.more-tech {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
-    border-color: rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 215, 0, 0.05) 100%);
+    border-color: rgba(212, 175, 55, 0.3);
 }
 
 .tech-image {
@@ -754,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 50%;
     width: 80px;
@@ -763,6 +762,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    border: 3px solid #D4AF37;
 }
 
 .tech-overlay i {
@@ -772,8 +772,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-card:hover .tech-overlay {
-    background: rgba(212, 175, 55, 0.9);
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
     transform: translate(-50%, -50%) scale(1.1);
+    border-color: #FFD700;
 }
 
 .tech-card:hover .tech-overlay i {
@@ -787,14 +788,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-content h3 {
-    color: #fff;
+    color: #333;
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
 
 .tech-content p {
-    color: #b8b8b8;
+    color: #666;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -808,7 +809,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-tags .tag {
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.1);
     color: #D4AF37;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
@@ -819,8 +820,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-card:hover .tech-tags .tag {
-    background: rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.2);
     border-color: #D4AF37;
+    transform: scale(1.05);
 }
 
 .more-tech .tech-content h3 {
@@ -831,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .more-tech .tech-content p {
-    color: #d4d4d4;
+    color: #555;
     font-size: 0.9rem;
 }
 
@@ -846,7 +848,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .technologies-showcase {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
         margin-top: 3rem;
     }
