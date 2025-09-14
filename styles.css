@@ -717,6 +717,11 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.15);
 }
 
+.tech-card.more-tech {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+    border-color: rgba(212, 175, 55, 0.4);
+    backdrop-filter: blur(20px);
+}
 
 .tech-image {
     position: relative;
@@ -812,6 +817,18 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(212, 175, 55, 0.2);
     border-color: #D4AF37;
     transform: scale(1.05);
+}
+
+.more-tech .tech-content h3 {
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.more-tech .tech-content p {
+    color: #e0e0e0;
+    font-size: 1rem;
 }
 
 /* Responsive Technologies */
