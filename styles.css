@@ -675,18 +675,18 @@ h1, h2, h3, h4, h5, h6 {
 /* Technologies Section */
 .technologies {
     padding: 100px 0;
-    background: #ffffff;
+    background: #000000;
     position: relative;
 }
 
 .technologies .section-header h2 {
-    color: #333;
+    color: #ffffff;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .technologies .section-header p {
-    color: #666;
+    color: #cccccc;
     font-size: 1.2rem;
 }
 
@@ -824,7 +824,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .more-tech .tech-content p {
-    color: #555;
+    color: #888;
     font-size: 0.9rem;
 }
 
