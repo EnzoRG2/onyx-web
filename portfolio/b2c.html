@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStyle - Mode Éthique | -50% sur votre première commande</title>
+    <link rel="stylesheet" href="b2c-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>EcoStyle</h2>
+                <span class="tagline">Mode Éthique</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#engagement">Engagement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="promo-banner">
+                    <span class="promo-text">🎉 -50% sur votre première commande</span>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="user-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <div class="hero-badge">
+                            <span>🔥 Offre limitée</span>
+                        </div>
+                        <h1>Mode <span class="highlight">Éthique</span> à -50%</h1>
+                        <p class="hero-subtitle">Vêtements éco-responsables fabriqués avec des matériaux recyclés. <strong>Première commande à -50%</strong> - Offre valable 48h seulement !</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">10,000+</span>
+                                <span class="stat-label">Clients satisfaits</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Écologique</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24h</span>
+                                <span class="stat-label">Livraison</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#produits" class="btn btn-primary">Profiter de l'offre -50%</a>
+                            <a href="#engagement" class="btn btn-secondary">Voir les avis clients</a>
+                        </div>
+                        <div class="hero-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantie satisfait ou remboursé 30 jours</span>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=800&fit=crop" alt="Mode éthique">
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <div class="hero-badge">
+                            <span>✨ Nouveauté</span>
+                        </div>
+                        <h1>Collection <span class="highlight">Printemps</span> -50%</h1>
+                        <p class="hero-subtitle">Des pièces fraîches et colorées pour égayer votre garde-robe. <strong>Offre spéciale printemps : -50% sur toute la collection</strong></p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Nouveaux modèles</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Coton bio</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">48h</span>
+                                <span class="stat-label">Offre limitée</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#produits" class="btn btn-primary">Découvrir la collection</a>
+                            <a href="#engagement" class="btn btn-secondary">Notre engagement</a>
+                        </div>
+                        <div class="hero-guarantee">
+                            <i class="fas fa-truck"></i>
+                            <span>Livraison gratuite dès 30€</span>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=800&fit=crop" alt="Collection printemps">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-content">
+                <div class="urgency-timer">
+                    <h3>⏰ Offre se termine dans :</h3>
+                    <div class="countdown">
+                        <div class="time-unit">
+                            <span class="time-number" id="hours">23</span>
+                            <span class="time-label">Heures</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number" id="minutes">59</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-number" id="seconds">59</span>
+                            <span class="time-label">Secondes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="urgency-cta">
+                    <a href="#produits" class="btn btn-primary btn-large">Profiter de l'offre maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% Écologique</h3>
+                    <p>Matériaux recyclés et processus de production respectueux de l'environnement</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Livraison Gratuite</h3>
+                    <p>Livraison gratuite dès 50€ d'achat partout en France</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Retour Facile</h3>
+                    <p>30 jours pour changer d'avis, retour gratuit et simple</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Fait avec Amour</h3>
+                    <p>Chaque pièce est créée avec passion par nos artisans partenaires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produits" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Produits</h2>
+                <p>Découvrez notre sélection de vêtements éthiques et durables</p>
+            </div>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="femme">Femme</button>
+                <button class="filter-btn" data-filter="homme">Homme</button>
+                <button class="filter-btn" data-filter="enfant">Enfant</button>
+                <button class="filter-btn" data-filter="accessoires">Accessoires</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="femme">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop" alt="T-shirt femme">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                        <div class="product-badge">Nouveau</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>T-shirt Bio Femme</h3>
+                        <p class="product-description">Coton biologique 100% recyclé</p>
+                        <div class="product-price">
+                            <span class="current-price">29€</span>
+                            <span class="original-price">39€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(24)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="homme">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=500&fit=crop" alt="Polo homme">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Polo Écologique Homme</h3>
+                        <p class="product-description">Polyester recyclé et coton bio</p>
+                        <div class="product-price">
+                            <span class="current-price">45€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-count">(18)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="enfant">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=400&h=500&fit=crop" alt="T-shirt enfant">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>T-shirt Enfant Bio</h3>
+                        <p class="product-description">Coton biologique, couleurs naturelles</p>
+                        <div class="product-price">
+                            <span class="current-price">19€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(32)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accessoires">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop" alt="Sac éthique">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                        <div class="product-badge">Populaire</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sac à Dos Écologique</h3>
+                        <p class="product-description">Matériaux recyclés, design moderne</p>
+                        <div class="product-price">
+                            <span class="current-price">65€</span>
+                            <span class="original-price">85€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(41)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="femme">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop" alt="Robe femme">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Robe Éthique Femme</h3>
+                        <p class="product-description">Lin biologique, coupe moderne</p>
+                        <div class="product-price">
+                            <span class="current-price">89€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-count">(15)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="homme">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=500&fit=crop" alt="Jean homme">
+                        <div class="product-overlay">
+                            <button class="quick-view">Aperçu rapide</button>
+                            <button class="add-to-cart">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jean Écologique Homme</h3>
+                        <p class="product-description">Denim recyclé, coupe classique</p>
+                        <div class="product-price">
+                            <span class="current-price">79€</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(28)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ce que disent nos clients</h2>
+                <p>Plus de 10,000 clients nous font confiance</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Qualité exceptionnelle ! J'ai commandé plusieurs pièces et je suis ravie. Les vêtements sont confortables et durables. Je recommande vivement !"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Marie">
+                        <div class="author-info">
+                            <span class="author-name">Marie L.</span>
+                            <span class="author-location">Paris</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Enfin une marque qui respecte l'environnement ! Les prix sont corrects et la livraison est rapide. Je ne commande plus ailleurs."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Sophie">
+                        <div class="author-info">
+                            <span class="author-name">Sophie M.</span>
+                            <span class="author-location">Lyon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Service client au top ! J'ai eu un problème avec ma commande et ils ont tout résolu rapidement. Très professionnel."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Julie">
+                        <div class="author-info">
+                            <span class="author-name">Julie R.</span>
+                            <span class="author-location">Marseille</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Notre Histoire</h2>
+                    <p>Depuis 2020, EcoStyle s'engage pour une mode plus responsable et durable. Nous croyons que la mode peut être belle, éthique et respectueuse de l'environnement.</p>
+                    <p>Notre mission est de proposer des vêtements de qualité, fabriqués avec des matériaux recyclés et dans des conditions de travail équitables.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Partenaires artisans</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Matériaux recyclés</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=600&fit=crop" alt="Notre équipe">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section id="engagement" class="commitment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Engagement</h2>
+                <p>Des valeurs qui nous guident dans chaque décision</p>
+            </div>
+            <div class="commitment-grid">
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Environnement</h3>
+                    <p>Nous utilisons uniquement des matériaux recyclés et des processus de production respectueux de l'environnement.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Équité Sociale</h3>
+                    <p>Tous nos partenaires artisans sont rémunérés équitablement et travaillent dans des conditions dignes.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Économie Circulaire</h3>
+                    <p>Nous favorisons l'économie circulaire en recyclant et réutilisant les matériaux existants.</p>
+                </div>
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Transparence</h3>
+                    <p>Nous sommes transparents sur nos processus de production et notre chaîne d'approvisionnement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez Informé</h2>
+                <p>Recevez nos dernières nouveautés et offres exclusives</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+                <p class="newsletter-disclaimer">En vous abonnant, vous acceptez de recevoir nos emails. Vous pouvez vous désabonner à tout moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contactez-Nous</h2>
+                    <p>Une question ? Un conseil ? Notre équipe est là pour vous aider.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Téléphone</span>
+                                <span class="contact-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">contact@ecostyle.fr</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-label">Adresse</span>
+                                <span class="contact-value">123 Rue de la Mode, 75001 Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <h3>Envoyez-nous un message</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Sujet">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoStyle</h3>
+                    <p>Mode éthique et durable pour un avenir meilleur.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Boutique</h4>
+                    <ul>
+                        <li><a href="#produits">Nouveautés</a></li>
+                        <li><a href="#produits">Femme</a></li>
+                        <li><a href="#produits">Homme</a></li>
+                        <li><a href="#produits">Enfant</a></li>
+                        <li><a href="#produits">Accessoires</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Client</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Guide des tailles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <ul>
+                        <li><a href="#a-propos">Notre histoire</a></li>
+                        <li><a href="#engagement">Notre engagement</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoStyle. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="b2c-script.js"></script>
+</body>
+</html>

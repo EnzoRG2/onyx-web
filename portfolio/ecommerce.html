@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Boutique en Ligne Technologique</title>
+    <link rel="stylesheet" href="ecommerce-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TechStore</h2>
+                <span class="tagline">Technologie & Innovation</span>
+            </div>
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" placeholder="Rechercher un produit..." id="searchInput">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#produits">Produits</a>
+                    <a href="#categories">Catégories</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user-icon" onclick="toggleUserMenu()">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Menu Dropdown -->
+    <div class="user-menu" id="userMenu">
+        <div class="user-menu-content">
+            <a href="#login" class="user-menu-item">
+                <i class="fas fa-sign-in-alt"></i>
+                Connexion
+            </a>
+            <a href="#register" class="user-menu-item">
+                <i class="fas fa-user-plus"></i>
+                Inscription
+            </a>
+            <a href="#orders" class="user-menu-item">
+                <i class="fas fa-box"></i>
+                Mes commandes
+            </a>
+            <a href="#profile" class="user-menu-item">
+                <i class="fas fa-cog"></i>
+                Mon profil
+            </a>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Panier</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Votre panier est vide</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: <span id="cartTotal">0€</span></span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">
+                <i class="fas fa-credit-card"></i>
+                Commander
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Découvrez les <span class="highlight">Dernières Technologies</span></h1>
+                <p>Smartphones, ordinateurs, accessoires et bien plus encore. Trouvez les meilleures offres sur les produits tech les plus tendance.</p>
+                <div class="hero-buttons">
+                    <a href="#produits" class="btn btn-primary">Voir les produits</a>
+                    <a href="#categories" class="btn btn-secondary">Explorer les catégories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=400&fit=crop" alt="Technologie">
+            </div>
+        </div>
+        <div class="hero-features">
+            <div class="feature">
+                <i class="fas fa-shipping-fast"></i>
+                <span>Livraison gratuite</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <span>Garantie 2 ans</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <span>Support 24/7</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Catégories</h2>
+                <p>Explorez notre large gamme de produits technologiques</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('smartphones')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop" alt="Smartphones">
+                    </div>
+                    <div class="category-info">
+                        <h3>Smartphones</h3>
+                        <p>Les derniers modèles des plus grandes marques</p>
+                        <span class="product-count">24 produits</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('laptops')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop" alt="Ordinateurs">
+                    </div>
+                    <div class="category-info">
+                        <h3>Ordinateurs</h3>
+                        <p>PC portables et de bureau pour tous les besoins</p>
+                        <span class="product-count">18 produits</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('accessories')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop" alt="Accessoires">
+                    </div>
+                    <div class="category-info">
+                        <h3>Accessoires</h3>
+                        <p>Casques, chargeurs, étuis et plus</p>
+                        <span class="product-count">35 produits</span>
+                    </div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('gaming')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=300&h=200&fit=crop" alt="Gaming">
+                    </div>
+                    <div class="category-info">
+                        <h3>Gaming</h3>
+                        <p>Équipements pour les passionnés de jeux vidéo</p>
+                        <span class="product-count">22 produits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produits" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Produits</h2>
+                <p>Découvrez notre sélection de produits technologiques</p>
+            </div>
+            <div class="products-controls">
+                <div class="products-filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="smartphones">Smartphones</button>
+                    <button class="filter-btn" data-filter="laptops">Ordinateurs</button>
+                    <button class="filter-btn" data-filter="accessories">Accessoires</button>
+                    <button class="filter-btn" data-filter="gaming">Gaming</button>
+                </div>
+                <div class="products-sort">
+                    <select id="sortSelect">
+                        <option value="default">Trier par</option>
+                        <option value="price-low">Prix croissant</option>
+                        <option value="price-high">Prix décroissant</option>
+                        <option value="name">Nom A-Z</option>
+                        <option value="rating">Note</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            <div class="load-more">
+                <button class="btn btn-secondary" onclick="loadMoreProducts()">Charger plus de produits</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Produits en Vedette</h2>
+                <p>Nos meilleures offres du moment</p>
+            </div>
+            <div class="featured-slider">
+                <div class="featured-slide active">
+                    <div class="featured-content">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="iPhone 15 Pro">
+                        </div>
+                        <div class="featured-info">
+                            <h3>iPhone 15 Pro</h3>
+                            <p>Le smartphone le plus avancé d'Apple avec le nouveau processeur A17 Pro</p>
+                            <div class="featured-price">
+                                <span class="current-price">1,199€</span>
+                                <span class="original-price">1,299€</span>
+                                <span class="discount">-8%</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="addToCart('iphone-15-pro', 1199)">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-slide">
+                    <div class="featured-content">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="MacBook Pro">
+                        </div>
+                        <div class="featured-info">
+                            <h3>MacBook Pro M3</h3>
+                            <p>Performance exceptionnelle pour les professionnels créatifs</p>
+                            <div class="featured-price">
+                                <span class="current-price">2,199€</span>
+                                <span class="original-price">2,499€</span>
+                                <span class="discount">-12%</span>
+                            </div>
+                            <button class="btn btn-primary" onclick="addToCart('macbook-pro-m3', 2199)">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-controls">
+                <button class="prev-featured"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-featured"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez Informé</h2>
+                <p>Recevez nos dernières offres et nouveautés technologiques</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+                <p class="newsletter-disclaimer">En vous abonnant, vous acceptez de recevoir nos emails promotionnels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contactez-Nous</h2>
+                    <p>Une question sur un produit ? Besoin d'aide ? Notre équipe est là pour vous.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Téléphone</span>
+                                <span class="contact-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">contact@techstore.fr</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-label">Adresse</span>
+                                <span class="contact-value">123 Avenue de la Tech, 75001 Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <h3>Envoyez-nous un message</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Sujet</option>
+                            <option value="product">Question produit</option>
+                            <option value="order">Commande</option>
+                            <option value="support">Support technique</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Votre boutique en ligne spécialisée dans les produits technologiques de qualité.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Boutique</h4>
+                    <ul>
+                        <li><a href="#produits">Nouveautés</a></li>
+                        <li><a href="#categories">Catégories</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Meilleures ventes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Client</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Garantie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Mon Compte</h4>
+                    <ul>
+                        <li><a href="#login">Connexion</a></li>
+                        <li><a href="#register">Inscription</a></li>
+                        <li><a href="#orders">Mes commandes</a></li>
+                        <li><a href="#profile">Mon profil</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ecommerce-script.js"></script>
+</body>
+</html>

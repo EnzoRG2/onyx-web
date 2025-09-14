@@ -1,0 +1,21 @@
+{
+  "name": "onyx-web",
+  "version": "1.0.0",
+  "description": "Site web prestigieux pour professionnels ambitieux",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - no start needed'"
+  },
+  "keywords": [
+    "web",
+    "portfolio",
+    "prestigieux",
+    "professionnel"
+  ],
+  "author": "Onyx Web",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

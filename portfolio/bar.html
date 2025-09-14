@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nights - Bar Moderne & Cocktails</title>
+    <link rel="stylesheet" href="bar-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Neon Nights</h2>
+                <span class="tagline">Bar & Cocktails</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#cocktails">Cocktails</a></li>
+                <li><a href="#evenements">Événements</a></li>
+                <li><a href="#ambiance">Ambiance</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#reservation" class="btn btn-primary">Réserver une table</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bienvenue dans l'<span class="highlight">Univers</span> Neon Nights</h1>
+                <p>Plongez dans une atmosphère futuriste où chaque cocktail est une œuvre d'art. Découvrez nos créations uniques dans un cadre moderne et électrisant.</p>
+                <div class="hero-buttons">
+                    <a href="#cocktails" class="btn btn-primary">Découvrir nos cocktails</a>
+                    <a href="#evenements" class="btn btn-secondary">Voir les événements</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="neon-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3>Cocktails Signature</h3>
+                    <p>Des créations uniques préparées par nos mixologues experts avec des ingrédients premium.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Musique Électronique</h3>
+                    <p>Sets de DJ internationaux et ambiance musicale immersive pour une expérience totale.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Ambiance Futuriste</h3>
+                    <p>Design moderne avec éclairage LED et effets visuels pour une expérience unique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-star"></i>
+                    </div>
+                    <h3>Événements Spéciaux</h3>
+                    <p>Soirées thématiques, lancements de produits et événements privés exclusifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cocktails Section -->
+    <section id="cocktails" class="cocktails">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Cocktails</h2>
+                <p>Des créations uniques qui éveillent tous vos sens</p>
+            </div>
+            <div class="cocktails-grid">
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Neon Dream">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Neon Dream</h3>
+                        <p class="cocktail-description">Vodka premium, liqueur de violette, jus de citron vert, sirop de sucre</p>
+                        <div class="cocktail-price">16€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Signature</span>
+                            <span class="tag">Violet</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" alt="Electric Blue">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Electric Blue</h3>
+                        <p class="cocktail-description">Gin, curaçao bleu, jus de citron, soda tonic, glaçons fumants</p>
+                        <div class="cocktail-price">18€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Bleu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop" alt="Cyber Punk">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Cyber Punk</h3>
+                        <p class="cocktail-description">Rhum, liqueur de café, crème de coco, sirop d'érable, piment</p>
+                        <div class="cocktail-price">19€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Épicé</span>
+                            <span class="tag">Rouge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop" alt="Matrix Martini">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Matrix Martini</h3>
+                        <p class="cocktail-description">Vodka, vermouth sec, liqueur de menthe, olives vertes</p>
+                        <div class="cocktail-price">17€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Classique</span>
+                            <span class="tag">Vert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" alt="Hologram">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Hologram</h3>
+                        <p class="cocktail-description">Tequila, triple sec, jus de citron vert, sirop d'agave, sel</p>
+                        <div class="cocktail-price">15€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Rafraîchissant</span>
+                            <span class="tag">Jaune</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cocktail-card">
+                    <div class="cocktail-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" alt="Digital Sunset">
+                        <div class="cocktail-overlay">
+                            <button class="view-recipe">Voir la recette</button>
+                        </div>
+                    </div>
+                    <div class="cocktail-info">
+                        <h3>Digital Sunset</h3>
+                        <p class="cocktail-description">Whisky, amaretto, jus d'orange, grenadine, cerise</p>
+                        <div class="cocktail-price">20€</div>
+                        <div class="cocktail-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Orange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="evenements" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Événements</h2>
+                <p>Des soirées inoubliables vous attendent</p>
+            </div>
+            <div class="events-timeline">
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">DEC</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Soirée Electro</h3>
+                        <p class="event-time">22h - 6h</p>
+                        <p class="event-description">Sets de DJ internationaux avec ambiance LED et effets visuels. Entrée gratuite avant minuit.</p>
+                        <div class="event-details">
+                            <span class="event-price">Entrée: 15€</span>
+                            <span class="event-dress">Dress code: Futuriste</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">DEC</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Lancement Cocktail Signature</h3>
+                        <p class="event-time">20h - 2h</p>
+                        <p class="event-description">Découvrez notre nouveau cocktail "Quantum" avec dégustation gratuite et animations spéciales.</p>
+                        <div class="event-details">
+                            <span class="event-price">Gratuit</span>
+                            <span class="event-dress">Sur réservation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="day">31</span>
+                        <span class="month">DEC</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Nouvel An Futuriste</h3>
+                        <p class="event-time">21h - 6h</p>
+                        <p class="event-description">Célébrez la nouvelle année dans un décor futuriste avec champagne premium et spectacle pyrotechnique.</p>
+                        <div class="event-details">
+                            <span class="event-price">80€</span>
+                            <span class="event-dress">Tenue de soirée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiance Section -->
+    <section id="ambiance" class="ambiance">
+        <div class="container">
+            <div class="section-header">
+                <h2>L'Ambiance</h2>
+                <p>Plongez dans notre univers futuriste</p>
+            </div>
+            <div class="ambiance-grid">
+                <div class="ambiance-card">
+                    <div class="ambiance-image">
+                        <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=500&h=400&fit=crop" alt="Bar principal">
+                    </div>
+                    <div class="ambiance-info">
+                        <h3>Bar Principal</h3>
+                        <p>Comptoir illuminé avec plus de 200 bouteilles premium et système d'éclairage LED dynamique.</p>
+                    </div>
+                </div>
+                <div class="ambiance-card">
+                    <div class="ambiance-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&h=400&fit=crop" alt="Piste de danse">
+                    </div>
+                    <div class="ambiance-info">
+                        <h3>Piste de Danse</h3>
+                        <p>Sol interactif avec capteurs de mouvement et effets lumineux synchronisés à la musique.</p>
+                    </div>
+                </div>
+                <div class="ambiance-card">
+                    <div class="ambiance-image">
+                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=500&h=400&fit=crop" alt="Salon VIP">
+                    </div>
+                    <div class="ambiance-info">
+                        <h3>Salon VIP</h3>
+                        <p>Espace privé avec vue panoramique, service dédié et ambiance personnalisable.</p>
+                    </div>
+                </div>
+                <div class="ambiance-card">
+                    <div class="ambiance-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop" alt="Terrasse">
+                    </div>
+                    <div class="ambiance-info">
+                        <h3>Terrasse Rooftop</h3>
+                        <p>Vue imprenable sur la ville avec bar extérieur et chauffage intégré pour les soirées fraîches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h2>Réservez Votre Soirée</h2>
+                    <p>Assurez-vous d'avoir une place dans notre bar en réservant à l'avance. Tables limitées disponibles.</p>
+                    <div class="reservation-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="detail-label">Horaires</span>
+                                <span class="detail-value">Mer-Dim: 20h-4h</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <span class="detail-label">Capacité</span>
+                                <span class="detail-value">Jusqu'à 200 personnes</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="detail-label">Réservation</span>
+                                <span class="detail-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="reservation-form">
+                    <h3>Formulaire de Réservation</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" placeholder="Téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Nombre de personnes" min="1" max="12" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Heure d'arrivée</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                                <option value="23:00">23:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option value="">Type de table (optionnel)</option>
+                            <option value="standard">Table standard</option>
+                            <option value="vip">Table VIP</option>
+                            <option value="rooftop">Table rooftop</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Demandes spéciales (anniversaire, célébration, etc.)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmer la réservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contactez-Nous</h2>
+                    <p>Une question ? Une demande spéciale ? Notre équipe est à votre écoute.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-label">Adresse</span>
+                                <span class="contact-value">123 Avenue de la Nuit, 75001 Paris</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Téléphone</span>
+                                <span class="contact-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">contact@neonnights.fr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608!2d2.292292515674!3d48.858370079287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1635789123456!5m2!1sfr!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Neon Nights</h3>
+                    <p>Bar moderne et futuriste au cœur de Paris. Une expérience nocturne unique vous attend.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Bar</h4>
+                    <ul>
+                        <li><a href="#cocktails">Cocktails</a></li>
+                        <li><a href="#evenements">Événements</a></li>
+                        <li><a href="#ambiance">Ambiance</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Événements</h4>
+                    <ul>
+                        <li><a href="#evenements">Soirées Electro</a></li>
+                        <li><a href="#evenements">Lancements</a></li>
+                        <li><a href="#evenements">Événements Privés</a></li>
+                        <li><a href="#evenements">Nouvel An</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Avenue de la Nuit</li>
+                        <li>75001 Paris, France</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>contact@neonnights.fr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Neon Nights. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bar-script.js"></script>
+</body>
+</html>

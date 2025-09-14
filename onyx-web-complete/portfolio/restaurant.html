@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Table Dorée - Restaurant Festif & Gastronomique</title>
+    <link rel="stylesheet" href="restaurant-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>La Table Dorée</h2>
+                <span class="tagline">Gastronomie & Festivités</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#evenements">Événements</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#reservation" class="btn btn-primary">Réserver une table</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Une <span class="highlight">Expérience</span> Culinaire Unique</h1>
+                        <p>Découvrez notre cuisine raffinée dans une ambiance chaleureuse et festive. Chaque plat est une œuvre d'art préparée avec passion par nos chefs.</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary">Découvrir le menu</a>
+                            <a href="#reservation" class="btn btn-secondary">Réserver maintenant</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Restaurant ambiance">
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>Événements <span class="highlight">Mémorables</span></h1>
+                        <p>Organisez vos célébrations dans notre espace élégant. Mariages, anniversaires, repas d'entreprise - nous créons des moments inoubliables.</p>
+                        <div class="hero-buttons">
+                            <a href="#evenements" class="btn btn-primary">Nos événements</a>
+                            <a href="#reservation" class="btn btn-secondary">Planifier un événement</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&h=400&fit=crop" alt="Événement festif">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cuisine Gastronomique</h3>
+                    <p>Des plats raffinés préparés avec des ingrédients frais et de saison par nos chefs expérimentés.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Carte des Vins</h3>
+                    <p>Une sélection soigneusement choisie de vins français et internationaux pour accompagner vos repas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Événements Privés</h3>
+                    <p>Organisez vos célébrations dans nos espaces privatisables avec un service personnalisé.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Ambiance Musicale</h3>
+                    <p>Concerts en live et DJ sets pour créer une atmosphère festive et conviviale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Notre Menu</h2>
+                <p>Une cuisine créative qui célèbre les saveurs authentiques</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-tab="entrees">Entrées</button>
+                <button class="menu-tab" data-tab="plats">Plats Principaux</button>
+                <button class="menu-tab" data-tab="desserts">Desserts</button>
+                <button class="menu-tab" data-tab="boissons">Boissons</button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-category active" id="entrees">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Foie Gras Maison</h3>
+                                <p>Foie gras de canard, chutney de figues, pain brioche toasté</p>
+                            </div>
+                            <div class="menu-item-price">28€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Saumon Fumé</h3>
+                                <p>Saumon fumé artisanal, blinis, crème fraîche, câpres</p>
+                            </div>
+                            <div class="menu-item-price">24€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Salade de Chèvre Chaud</h3>
+                                <p>Chèvre chaud sur toast, salade verte, noix, vinaigrette miel</p>
+                            </div>
+                            <div class="menu-item-price">18€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Escargots de Bourgogne</h3>
+                                <p>Escargots au beurre persillé, ail, herbes de Provence</p>
+                            </div>
+                            <div class="menu-item-price">22€</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category" id="plats">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Magret de Canard</h3>
+                                <p>Magret grillé, sauce aux cerises, légumes de saison</p>
+                            </div>
+                            <div class="menu-item-price">32€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Bœuf Wellington</h3>
+                                <p>Filet de bœuf en croûte, champignons, foie gras</p>
+                            </div>
+                            <div class="menu-item-price">45€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Saumon en Croûte</h3>
+                                <p>Saumon en croûte de sel, légumes vapeur, beurre blanc</p>
+                            </div>
+                            <div class="menu-item-price">28€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Risotto aux Champignons</h3>
+                                <p>Risotto crémeux, champignons sauvages, parmesan</p>
+                            </div>
+                            <div class="menu-item-price">26€</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category" id="desserts">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Tarte Tatin</h3>
+                                <p>Tarte aux pommes caramélisées, crème chantilly</p>
+                            </div>
+                            <div class="menu-item-price">12€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Crème Brûlée</h3>
+                                <p>Crème brûlée vanille, fruits rouges</p>
+                            </div>
+                            <div class="menu-item-price">10€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Mousse au Chocolat</h3>
+                                <p>Mousse au chocolat noir, coulis de fruits rouges</p>
+                            </div>
+                            <div class="menu-item-price">11€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Tiramisu</h3>
+                                <p>Tiramisu traditionnel, café, mascarpone</p>
+                            </div>
+                            <div class="menu-item-price">13€</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category" id="boissons">
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Champagne Dom Pérignon</h3>
+                                <p>Champagne millésimé, bouteille</p>
+                            </div>
+                            <div class="menu-item-price">180€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Vin Rouge Bordeaux</h3>
+                                <p>Château Margaux 2015, bouteille</p>
+                            </div>
+                            <div class="menu-item-price">120€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Cocktail Signature</h3>
+                                <p>La Table Dorée - Gin, citron, sirop de violette</p>
+                            </div>
+                            <div class="menu-item-price">14€</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h3>Eau Minérale</h3>
+                                <p>Evian, Perrier, San Pellegrino</p>
+                            </div>
+                            <div class="menu-item-price">4€</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="evenements" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Événements</h2>
+                <p>Créez des souvenirs inoubliables avec nous</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop" alt="Mariage">
+                        <div class="event-overlay">
+                            <h3>Mariages</h3>
+                            <p>Cérémonies élégantes et réceptions festives</p>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Mariages</h3>
+                        <p>Organisez votre plus beau jour dans notre cadre enchanteur. Service traiteur, décoration florale et animation musicale.</p>
+                        <ul class="event-features">
+                            <li><i class="fas fa-check"></i> Menu personnalisé</li>
+                            <li><i class="fas fa-check"></i> Décoration florale</li>
+                            <li><i class="fas fa-check"></i> Animation musicale</li>
+                            <li><i class="fas fa-check"></i> Service traiteur</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn-outline">Demander un devis</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop" alt="Anniversaire">
+                        <div class="event-overlay">
+                            <h3>Anniversaires</h3>
+                            <p>Célébrations privées et intimes</p>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Anniversaires</h3>
+                        <p>Fêtez vos anniversaires dans une ambiance chaleureuse. Espace privatisable pour 20 à 80 personnes.</p>
+                        <ul class="event-features">
+                            <li><i class="fas fa-check"></i> Espace privatisable</li>
+                            <li><i class="fas fa-check"></i> Menu festif</li>
+                            <li><i class="fas fa-check"></i> Gâteau personnalisé</li>
+                            <li><i class="fas fa-check"></i> Animation DJ</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn-outline">Réserver</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop" alt="Entreprise">
+                        <div class="event-overlay">
+                            <h3>Événements d'Entreprise</h3>
+                            <p>Séminaires et repas d'affaires</p>
+                        </div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Événements d'Entreprise</h3>
+                        <p>Organisez vos événements professionnels dans un cadre raffiné. Salles équipées et service haut de gamme.</p>
+                        <ul class="event-features">
+                            <li><i class="fas fa-check"></i> Salles équipées</li>
+                            <li><i class="fas fa-check"></i> Menu business</li>
+                            <li><i class="fas fa-check"></i> Équipement AV</li>
+                            <li><i class="fas fa-check"></i> Service dédié</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn-outline">Planifier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galerie</h2>
+                <p>Découvrez l'ambiance de notre restaurant</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Salle principale">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop" alt="Événement">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop" alt="Cuisine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Plat">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop" alt="Bar">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Terrasse">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h2>Réservez Votre Table</h2>
+                    <p>Assurez-vous d'avoir une place dans notre restaurant en réservant à l'avance. Nous nous ferons un plaisir de vous accueillir.</p>
+                    <div class="reservation-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="detail-label">Horaires</span>
+                                <span class="detail-value">Lun-Dim: 12h-14h30 / 19h-23h</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <span class="detail-label">Capacité</span>
+                                <span class="detail-value">Jusqu'à 120 personnes</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="detail-label">Réservation</span>
+                                <span class="detail-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="reservation-form">
+                    <h3>Formulaire de Réservation</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" placeholder="Téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Nombre de personnes" min="1" max="20" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Heure</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Demandes spéciales (allergies, anniversaire, etc.)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmer la réservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contactez-Nous</h2>
+                    <p>Une question ? Une demande spéciale ? Notre équipe est à votre écoute.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="contact-label">Adresse</span>
+                                <span class="contact-value">123 Rue de la Gastronomie, 75001 Paris</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Téléphone</span>
+                                <span class="contact-value">+33 1 23 45 67 89</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">contact@latabledoree.fr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608!2d2.292292515674!3d48.858370079287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1635789123456!5m2!1sfr!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>La Table Dorée</h3>
+                    <p>Restaurant gastronomique et événementiel dans le cœur de Paris. Une expérience culinaire unique vous attend.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Restaurant</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#evenements">Événements</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Événements</h4>
+                    <ul>
+                        <li><a href="#evenements">Mariages</a></li>
+                        <li><a href="#evenements">Anniversaires</a></li>
+                        <li><a href="#evenements">Entreprises</a></li>
+                        <li><a href="#evenements">Célébrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Rue de la Gastronomie</li>
+                        <li>75001 Paris, France</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>contact@latabledoree.fr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La Table Dorée. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="restaurant-script.js"></script>
+</body>
+</html>
