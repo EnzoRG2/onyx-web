@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('animate-fadeInUp');
     });
 
+    // Add staggered animation to map info items
+    const infoItems = document.querySelectorAll('.info-item');
+    infoItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+        item.classList.add('animate-fadeInUp');
+    });
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
