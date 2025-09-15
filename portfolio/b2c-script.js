@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
         step.classList.add('animate-fadeInUp');
     });
 
+    // Add staggered animation to final card features
+    const featureItems = document.querySelectorAll('.feature-item');
+    featureItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+        item.classList.add('animate-fadeInUp');
+    });
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
