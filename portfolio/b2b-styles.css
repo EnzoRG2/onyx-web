@@ -26,8 +26,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight {
-    color: #059669;
-    background: linear-gradient(45deg, #059669, #10b981);
+    color: #2563eb;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -47,24 +47,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #059669, #10b981);
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
     color: #fff;
-    border-color: #059669;
+    border-color: #2563eb;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #059669;
-    border-color: #059669;
+    color: #2563eb;
+    border-color: #2563eb;
 }
 
 .btn-secondary:hover {
-    background: #059669;
+    background: #2563eb;
     color: #fff;
 }
 
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo h2 {
-    color: #059669;
+    color: #2563eb;
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.2rem;
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover {
-    color: #059669;
+    color: #2563eb;
 }
 
 .nav-menu a::after {
@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background: #059669;
+    background: #2563eb;
     transition: width 0.3s ease;
 }
 
@@ -188,8 +188,8 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(5, 150, 105, 0.1);
-    color: #059669;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #059669;
+    color: #2563eb;
     line-height: 1;
 }
 
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dashboard-dots span:last-child {
-    background: #10b981;
+    background: #3b82f6;
 }
 
 .dashboard-title {
@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .metric-card i {
     font-size: 1.5rem;
-    color: #059669;
+    color: #2563eb;
     margin-bottom: 0.5rem;
 }
 
@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(45deg, #059669, #10b981);
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #10b981;
+    color: #3b82f6;
     font-weight: bold;
 }
 
@@ -456,8 +456,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .tab-btn.active,
 .tab-btn:hover {
-    background: #059669;
-    border-color: #059669;
+    background: #2563eb;
+    border-color: #2563eb;
     color: #fff;
 }
 
@@ -508,7 +508,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .solution-features i {
-    color: #10b981;
+    color: #3b82f6;
     font-size: 1.1rem;
 }
 
@@ -648,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-item i {
-    color: #10b981;
+    color: #3b82f6;
     font-size: 1.5rem;
     width: 30px;
 }
@@ -668,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 20px;
     padding: 2.5rem;
 }
@@ -711,7 +711,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #10b981;
+    border-color: #3b82f6;
 }
 
 .form-group select option {
@@ -735,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-section h3,
 .footer-section h4 {
-    color: #10b981;
+    color: #3b82f6;
     margin-bottom: 1rem;
 }
 
@@ -754,7 +754,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-section ul li a:hover {
-    color: #10b981;
+    color: #3b82f6;
 }
 
 .social-links {
@@ -766,17 +766,17 @@ h1, h2, h3, h4, h5, h6 {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(16, 185, 129, 0.2);
+    background: rgba(59, 130, 246, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #10b981;
+    color: #3b82f6;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background: #10b981;
+    background: #3b82f6;
     color: #fff;
     transform: translateY(-2px);
 }
