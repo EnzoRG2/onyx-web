@@ -584,8 +584,7 @@ function proceedToCheckout() {
         return;
     }
     
-    showNotification('Redirection vers le paiement...', 'info');
-    // Here you would typically redirect to a checkout page
+    showCheckoutModal();
 }
 
 // Load more products (simulation)
