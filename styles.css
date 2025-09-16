@@ -484,9 +484,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .options-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -786,11 +786,17 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .options-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
