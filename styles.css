@@ -255,15 +255,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pyramide inversée : 3 en haut, 2 en bas centrées entre les cartes du milieu */
 .services-grid .service-card:nth-child(4) {
-    grid-column: 2;
+    grid-column: 1.5 / 2.5;
     grid-row: 2;
-    justify-self: end;
 }
 
 .services-grid .service-card:nth-child(5) {
-    grid-column: 2;
+    grid-column: 2.5 / 3.5;
     grid-row: 2;
-    justify-self: start;
 }
 
 .service-card {
@@ -325,15 +323,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pyramide inversée : 3 en haut, 2 en bas centrées entre les cartes du milieu */
 .portfolio-grid .portfolio-item:nth-child(4) {
-    grid-column: 2;
+    grid-column: 1.5 / 2.5;
     grid-row: 2;
-    justify-self: end;
 }
 
 .portfolio-grid .portfolio-item:nth-child(5) {
-    grid-column: 2;
+    grid-column: 2.5 / 3.5;
     grid-row: 2;
-    justify-self: start;
 }
 
 .portfolio-item {
