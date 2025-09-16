@@ -459,6 +459,104 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
+/* Options communes */
+.pricing-options {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.pricing-options .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pricing-options .section-header h3 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-options .section-header p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.option-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+}
+
+.option-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.option-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.option-card h4 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.option-price {
+    font-size: 1.1rem;
+    color: #d4af37;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.option-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option-features li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.option-features i {
+    color: #10b981;
+    font-size: 0.8rem;
+}
+
 .price {
     display: flex;
     align-items: baseline;
@@ -685,6 +783,10 @@ h1, h2, h3, h4, h5, h6 {
     
     .pricing-card.featured:hover {
         transform: translateY(-10px);
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
     }
 }
 
