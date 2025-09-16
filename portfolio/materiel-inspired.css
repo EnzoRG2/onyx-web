@@ -1,5 +1,11 @@
 /* Materiel.net Inspired Styles */
 
+/* Reset body margin */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Navigation inspired by Materiel.net */
 .navbar {
     background: #ffffff;
@@ -11,6 +17,7 @@
     padding: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #e5e7eb;
+    height: 70px;
 }
 
 .nav-container {
@@ -238,7 +245,8 @@
 
 /* Hero Section inspired by Materiel.net */
 .hero {
-    margin-top: 70px;
+    margin-top: 0;
+    padding-top: 70px;
 }
 
 .hero-banner {
@@ -663,4 +671,23 @@
     .service-item {
         padding: 1rem;
     }
+}
+
+/* Ensure all interactive elements are clickable */
+.nav-links a,
+.dropdown-section a,
+.service-item,
+.cart-icon,
+.search-btn,
+.search-btn-large,
+.product-card {
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-links a:hover,
+.dropdown-section a:hover,
+.service-item:hover,
+.cart-icon:hover {
+    opacity: 0.8;
 }

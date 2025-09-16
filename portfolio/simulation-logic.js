@@ -107,28 +107,60 @@ function updateUserInterface() {
 
 // Setup event listeners for all interactive elements
 function setupEventListeners() {
-    // Service items
-    document.querySelectorAll('.service-item').forEach(item => {
-        item.addEventListener('click', function() {
-            simulateServiceClick(this);
+    // Wait for DOM to be fully loaded
+    setTimeout(() => {
+        // Service items
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('click', function() {
+                simulateServiceClick(this);
+            });
         });
-    });
-    
-    // Navigation links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            simulateNavigationClick(this.textContent.trim());
+        
+        // Navigation links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                simulateNavigationClick(this.textContent.trim());
+            });
         });
-    });
-    
-    // Dropdown links
-    document.querySelectorAll('.dropdown-section a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            simulateCategoryNavigation(this.textContent.trim());
+        
+        // Dropdown links
+        document.querySelectorAll('.dropdown-section a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                simulateCategoryNavigation(this.textContent.trim());
+            });
         });
-    });
+        
+        // Cart icon
+        const cartIcon = document.querySelector('.cart-icon');
+        if (cartIcon) {
+            cartIcon.addEventListener('click', function() {
+                toggleCart();
+            });
+        }
+        
+        // Search inputs
+        document.querySelectorAll('input[type="text"]').forEach(input => {
+            if (input.placeholder.includes('Rechercher')) {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        simulateSearch(this.value);
+                    }
+                });
+            }
+        });
+        
+        // Search buttons
+        document.querySelectorAll('.search-btn, .search-btn-large').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                if (input) {
+                    simulateSearch(input.value);
+                }
+            });
+        });
+    }, 100);
 }
 
 // Simulate category click
