@@ -467,6 +467,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 70px;
     padding-top: 0;
     background: #f0f0f0;
+    border: 5px solid orange;
+    min-height: 200px;
 }
 
 .hero-image-banner {
@@ -474,6 +476,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 300px;
     overflow: hidden;
     position: relative;
+    background: red;
+    border: 3px solid blue;
 }
 
 .hero-image-banner img {
@@ -481,6 +485,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border: 2px solid green;
 }
 
 .hero-banner {
