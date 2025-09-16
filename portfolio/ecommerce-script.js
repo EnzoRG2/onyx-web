@@ -1,74 +1,99 @@
-// Sample products data
+// Sample products data - LDLC inspired
 const products = [
+    // Apple Products
     {
         id: 'iphone-15-pro',
-        name: 'iPhone 15 Pro',
-        description: 'Le smartphone le plus avancé d\'Apple',
+        name: 'iPhone 15 Pro 128GB',
+        description: 'Le smartphone le plus avancé d\'Apple avec le nouveau processeur A17 Pro',
         price: 1199,
         originalPrice: 1299,
-        category: 'smartphones',
+        category: 'apple',
         image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
         rating: 4.8,
         reviews: 156,
-        badge: 'sale'
-    },
-    {
-        id: 'samsung-galaxy-s24',
-        name: 'Samsung Galaxy S24',
-        description: 'Innovation et performance réunies',
-        price: 899,
-        originalPrice: 999,
-        category: 'smartphones',
-        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
-        rating: 4.6,
-        reviews: 89,
-        badge: 'new'
+        badge: 'sale',
+        brand: 'Apple'
     },
     {
         id: 'macbook-pro-m3',
-        name: 'MacBook Pro M3',
-        description: 'Performance exceptionnelle pour les créatifs',
+        name: 'MacBook Pro 14" M3',
+        description: 'Performance exceptionnelle pour les professionnels créatifs',
         price: 2199,
         originalPrice: 2499,
-        category: 'laptops',
+        category: 'apple',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop',
         rating: 4.9,
         reviews: 234,
-        badge: 'sale'
+        badge: 'sale',
+        brand: 'Apple'
     },
     {
+        id: 'airpods-pro',
+        name: 'AirPods Pro (2ème génération)',
+        description: 'Écouteurs sans fil avec réduction de bruit active',
+        price: 249,
+        category: 'apple',
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+        rating: 4.7,
+        reviews: 312,
+        badge: null,
+        brand: 'Apple'
+    },
+    
+    // PC Portables
+    {
         id: 'dell-xps-13',
-        name: 'Dell XPS 13',
+        name: 'Dell XPS 13 Plus',
         description: 'Ultrabook premium pour professionnels',
         price: 1299,
         category: 'laptops',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop',
         rating: 4.5,
         reviews: 78,
-        badge: 'new'
+        badge: 'new',
+        brand: 'Dell'
     },
     {
-        id: 'airpods-pro',
-        name: 'AirPods Pro',
-        description: 'Écouteurs sans fil avec réduction de bruit',
-        price: 249,
-        category: 'accessories',
-        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
-        rating: 4.7,
-        reviews: 312,
-        badge: null
-    },
-    {
-        id: 'logitech-mx-master',
-        name: 'Logitech MX Master 3S',
-        description: 'Souris sans fil pour professionnels',
-        price: 99,
-        category: 'accessories',
-        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+        id: 'asus-rog-strix',
+        name: 'ASUS ROG Strix G15',
+        description: 'PC portable gaming haute performance',
+        price: 1599,
+        category: 'laptops',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop',
         rating: 4.6,
-        reviews: 145,
-        badge: null
+        reviews: 89,
+        badge: null,
+        brand: 'ASUS'
     },
+    
+    // Smartphones
+    {
+        id: 'samsung-galaxy-s24',
+        name: 'Samsung Galaxy S24 Ultra',
+        description: 'Innovation et performance réunies avec IA',
+        price: 899,
+        originalPrice: 999,
+        category: 'smartphones',
+        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
+        rating: 4.6,
+        reviews: 89,
+        badge: 'new',
+        brand: 'Samsung'
+    },
+    {
+        id: 'google-pixel-8',
+        name: 'Google Pixel 8 Pro',
+        description: 'Photographie exceptionnelle avec Google AI',
+        price: 799,
+        category: 'smartphones',
+        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop',
+        rating: 4.4,
+        reviews: 67,
+        badge: null,
+        brand: 'Google'
+    },
+    
+    // Gaming
     {
         id: 'ps5-console',
         name: 'PlayStation 5',
@@ -78,7 +103,8 @@ const products = [
         image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop',
         rating: 4.8,
         reviews: 567,
-        badge: 'new'
+        badge: 'new',
+        brand: 'Sony'
     },
     {
         id: 'nintendo-switch',
@@ -89,7 +115,99 @@ const products = [
         image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop',
         rating: 4.7,
         reviews: 423,
-        badge: null
+        badge: null,
+        brand: 'Nintendo'
+    },
+    {
+        id: 'xbox-series-x',
+        name: 'Xbox Series X',
+        description: 'Console gaming la plus puissante',
+        price: 499,
+        category: 'gaming',
+        image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop',
+        rating: 4.7,
+        reviews: 234,
+        badge: null,
+        brand: 'Microsoft'
+    },
+    
+    // TV & Son
+    {
+        id: 'samsung-tv-55',
+        name: 'Samsung QLED 55" 4K',
+        description: 'TV QLED 4K avec technologie Quantum Dot',
+        price: 899,
+        originalPrice: 1099,
+        category: 'tv',
+        image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop',
+        rating: 4.5,
+        reviews: 123,
+        badge: 'sale',
+        brand: 'Samsung'
+    },
+    {
+        id: 'sony-wh-1000xm5',
+        name: 'Sony WH-1000XM5',
+        description: 'Casque sans fil avec réduction de bruit',
+        price: 399,
+        category: 'tv',
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+        rating: 4.8,
+        reviews: 456,
+        badge: null,
+        brand: 'Sony'
+    },
+    
+    // Composants
+    {
+        id: 'rtx-4080',
+        name: 'NVIDIA GeForce RTX 4080',
+        description: 'Carte graphique gaming haute performance',
+        price: 1199,
+        category: 'components',
+        image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop',
+        rating: 4.6,
+        reviews: 89,
+        badge: null,
+        brand: 'NVIDIA'
+    },
+    {
+        id: 'intel-i7-13700k',
+        name: 'Intel Core i7-13700K',
+        description: 'Processeur Intel 13ème génération',
+        price: 399,
+        category: 'components',
+        image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop',
+        rating: 4.7,
+        reviews: 156,
+        badge: null,
+        brand: 'Intel'
+    },
+    
+    // Accessoires
+    {
+        id: 'logitech-mx-master',
+        name: 'Logitech MX Master 3S',
+        description: 'Souris sans fil pour professionnels',
+        price: 99,
+        category: 'accessories',
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+        rating: 4.6,
+        reviews: 145,
+        badge: null,
+        brand: 'Logitech'
+    },
+    {
+        id: 'keychron-k2',
+        name: 'Keychron K2 V2',
+        description: 'Clavier mécanique sans fil',
+        price: 79,
+        category: 'accessories',
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
+        rating: 4.5,
+        reviews: 98,
+        badge: null,
+        brand: 'Keychron'
     }
 ];
 
@@ -159,6 +277,7 @@ function createProductCard(product) {
     
     const badgeHtml = product.badge ? `<div class="product-badge ${product.badge}">${product.badge === 'sale' ? 'Promo' : 'Nouveau'}</div>` : '';
     const originalPriceHtml = product.originalPrice ? `<span class="original-price">${product.originalPrice}€</span>` : '';
+    const brandHtml = product.brand ? `<div class="product-brand">${product.brand}</div>` : '';
     
     card.innerHTML = `
         <div class="product-image">
@@ -170,6 +289,7 @@ function createProductCard(product) {
             ${badgeHtml}
         </div>
         <div class="product-info">
+            ${brandHtml}
             <h3>${product.name}</h3>
             <p class="product-description">${product.description}</p>
             <div class="product-price">
