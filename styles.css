@@ -253,13 +253,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.services-grid .service-card:nth-child(4),
-.services-grid .service-card:nth-child(5) {
-    grid-column: span 1;
+/* Pyramide inversée : 3 en haut, 2 en bas */
+.services-grid .service-card:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.services-grid .service-card:nth-child(4) {
-    grid-column: 2;
+.services-grid .service-card:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .service-card {
@@ -319,13 +321,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.portfolio-grid .portfolio-item:nth-child(4),
-.portfolio-grid .portfolio-item:nth-child(5) {
-    grid-column: span 1;
+/* Pyramide inversée : 3 en haut, 2 en bas */
+.portfolio-grid .portfolio-item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.portfolio-grid .portfolio-item:nth-child(4) {
-    grid-column: 2;
+.portfolio-grid .portfolio-item:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .portfolio-item {
