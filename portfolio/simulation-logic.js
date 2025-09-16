@@ -107,14 +107,6 @@ function updateUserInterface() {
 
 // Setup event listeners for all interactive elements
 function setupEventListeners() {
-    // Category cards
-    document.querySelectorAll('.category-card-large').forEach(card => {
-        card.addEventListener('click', function() {
-            const category = this.getAttribute('onclick')?.match(/'([^']+)'/)?.[1] || 'all';
-            simulateCategoryClick(category);
-        });
-    });
-    
     // Service items
     document.querySelectorAll('.service-item').forEach(item => {
         item.addEventListener('click', function() {
@@ -215,8 +207,13 @@ function clearFilter() {
 
 // Setup product interactions
 function setupProductInteractions() {
-    // Add click handlers to all product cards
+    // Add click handlers to all product cards (excluding buttons)
     document.addEventListener('click', function(e) {
+        // Don't trigger if clicking on buttons or interactive elements
+        if (e.target.closest('button') || e.target.closest('.add-to-cart') || e.target.closest('.quick-view')) {
+            return;
+        }
+        
         if (e.target.closest('.product-card')) {
             const productCard = e.target.closest('.product-card');
             const productId = productCard.querySelector('.add-to-cart')?.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
