@@ -445,6 +445,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
+.pricing-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
 .price {
     display: flex;
     align-items: baseline;
