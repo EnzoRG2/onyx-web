@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize simulation features
 function initializeSimulation() {
-    console.log('🎮 Simulation Mode Activated!');
-    
     // Add simulation indicators
     addSimulationIndicators();
     
@@ -51,44 +49,7 @@ function initializeSimulation() {
 
 // Add visual indicators for simulation mode
 function addSimulationIndicators() {
-    const indicator = document.createElement('div');
-    indicator.id = 'simulation-indicator';
-    indicator.innerHTML = `
-        <div class="sim-indicator">
-            <i class="fas fa-gamepad"></i>
-            <span>Mode Simulation Activé</span>
-        </div>
-    `;
-    document.body.appendChild(indicator);
-    
-    // Add CSS for indicator
-    const style = document.createElement('style');
-    style.textContent = `
-        #simulation-indicator {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 10000;
-            background: linear-gradient(45deg, #3b82f6, #60a5fa);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-            animation: pulse 2s infinite;
-        }
-        
-        .sim-indicator i {
-            margin-right: 5px;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-    `;
-    document.head.appendChild(style);
+    // Simulation indicators removed for professional appearance
 }
 
 // Initialize user session
@@ -180,8 +141,6 @@ function setupEventListeners() {
 
 // Simulate category click
 function simulateCategoryClick(category) {
-    showNotification(`🔍 Filtrage par catégorie: ${category}`, 'info');
-    
     // Filter products
     filterProductsByCategory(category);
     
@@ -252,7 +211,6 @@ function updateFilterIndicator(category) {
 // Clear filter
 function clearFilter() {
     filterProductsByCategory('all');
-    showNotification('✅ Filtre supprimé', 'success');
 }
 
 // Setup product interactions
@@ -519,11 +477,8 @@ function setupSearchFunctionality() {
 // Simulate search
 function simulateSearch(query) {
     if (!query.trim()) {
-        showNotification('⚠️ Veuillez entrer un terme de recherche', 'warning');
         return;
     }
-    
-    showNotification(`🔍 Recherche: "${query}"`, 'info');
     
     // Add to search history
     simulationState.searchHistory.push({
@@ -595,8 +550,6 @@ function clearSearch() {
     if (indicator) {
         indicator.remove();
     }
-    
-    showNotification('✅ Recherche effacée', 'success');
 }
 
 // Setup filter and sort
@@ -782,15 +735,12 @@ function addFilterAndSortControls() {
 
 // Simulate category filter
 function simulateCategoryFilter(category) {
-    showNotification(`🔍 Filtrage par catégorie: ${category}`, 'info');
     filterProductsByCategory(category);
     simulationState.currentFilter = category;
 }
 
 // Simulate sort
 function simulateSort(sortBy) {
-    showNotification(`📊 Tri par: ${sortBy}`, 'info');
-    
     const productsContainer = document.querySelector('.products-grid');
     const products = Array.from(productsContainer.children);
     
@@ -831,8 +781,6 @@ function getProductRating(element) {
 
 // Simulate view change
 function simulateViewChange(view) {
-    showNotification(`👁️ Affichage: ${view === 'grid' ? 'Grille' : 'Liste'}`, 'info');
-    
     const productsGrid = document.querySelector('.products-grid');
     const viewButtons = document.querySelectorAll('.view-btn');
     
@@ -893,7 +841,7 @@ function showProfileModal() {
                         </div>
                     </div>
                     <div class="profile-actions">
-                        <button class="btn btn-primary" onclick="showNotification('✅ Profil mis à jour', 'success'); closeModal(this)">
+                        <button class="btn btn-primary" onclick="closeModal(this)">
                             Sauvegarder
                         </button>
                         <button class="btn btn-secondary" onclick="closeModal(this)">
@@ -1023,7 +971,7 @@ function showSettingsModal() {
                         </div>
                     </div>
                     <div class="settings-actions">
-                        <button class="btn btn-primary" onclick="showNotification('✅ Paramètres sauvegardés', 'success'); closeModal(this)">
+                        <button class="btn btn-primary" onclick="closeModal(this)">
                             Sauvegarder
                         </button>
                         <button class="btn btn-secondary" onclick="closeModal(this)">
@@ -1040,7 +988,6 @@ function showSettingsModal() {
 
 // Simulate logout
 function simulateLogout() {
-    showNotification('👋 Déconnexion réussie', 'info');
     simulationState.isLoggedIn = false;
     
     // Reset user interface
@@ -1057,14 +1004,12 @@ function simulateLogout() {
 
 // Simulate login
 function simulateLogin() {
-    showNotification('🔐 Connexion simulée', 'success');
     simulationState.isLoggedIn = true;
     updateUserInterface();
 }
 
 // Simulate register
 function simulateRegister() {
-    showNotification('📝 Inscription simulée', 'success');
     simulationState.isLoggedIn = true;
     updateUserInterface();
 }
@@ -1160,36 +1105,39 @@ function setupNotificationsSystem() {
     document.head.appendChild(style);
 }
 
-// Show notification
+// Show notification (only for important actions)
 function showNotification(message, type = 'info') {
-    const container = document.getElementById('notification-container');
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    
-    const icons = {
-        success: '✅',
-        warning: '⚠️',
-        error: '❌',
-        info: 'ℹ️'
-    };
-    
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span class="notification-icon">${icons[type] || 'ℹ️'}</span>
-            <span class="notification-message">${message}</span>
-            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
-        </div>
-    `;
-    
-    container.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.style.animation = 'slideOutRight 0.3s ease';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
+    // Only show notifications for critical actions
+    if (type === 'error' || message.includes('Erreur') || message.includes('Échec')) {
+        const container = document.getElementById('notification-container');
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        
+        const icons = {
+            success: '✅',
+            warning: '⚠️',
+            error: '❌',
+            info: 'ℹ️'
+        };
+        
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span class="notification-icon">${icons[type] || 'ℹ️'}</span>
+                <span class="notification-message">${message}</span>
+                <button class="notification-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+            </div>
+        `;
+        
+        container.appendChild(notification);
+        
+        // Auto remove after 3 seconds for errors
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 3000);
+    }
 }
 
 // Add click feedback
@@ -1237,17 +1185,12 @@ function addToFavorites(productId) {
     const product = products.find(p => p.id === productId);
     if (product && !simulationState.favorites.find(p => p.id === productId)) {
         simulationState.favorites.push(product);
-        showNotification(`❤️ ${product.name} ajouté aux favoris`, 'success');
         saveUserData();
-    } else {
-        showNotification('⚠️ Produit déjà dans les favoris', 'warning');
     }
 }
 
 // Simulate navigation click
 function simulateNavigationClick(linkText) {
-    showNotification(`🔗 Navigation: ${linkText}`, 'info');
-    
     // Simulate page loading
     const body = document.body;
     body.style.opacity = '0.7';
@@ -1255,20 +1198,17 @@ function simulateNavigationClick(linkText) {
     
     setTimeout(() => {
         body.style.opacity = '1';
-        showNotification(`✅ Page ${linkText} chargée`, 'success');
     }, 1000);
 }
 
 // Simulate category navigation
 function simulateCategoryNavigation(category) {
-    showNotification(`📂 Catégorie: ${category}`, 'info');
     // Could implement actual category filtering here
 }
 
 // Simulate service click
 function simulateServiceClick(element) {
-    const serviceName = element.querySelector('h4')?.textContent || 'Service';
-    showNotification(`🛠️ ${serviceName} - Fonctionnalité en cours de développement`, 'info');
+    // Service click handled silently for professional appearance
 }
 
 // Initialize everything when DOM is loaded
