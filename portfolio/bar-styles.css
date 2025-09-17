@@ -617,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ambiance-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -1013,7 +1013,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
     }
     
-    .cocktails-grid,
+    .cocktails-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .ambiance-grid {
         grid-template-columns: 1fr;
     }
