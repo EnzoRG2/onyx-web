@@ -425,8 +425,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .cocktail-image {
     position: relative;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
+    background: #1a1a1a;
+    border-radius: 10px 10px 0 0;
 }
 
 .cocktail-image img {
@@ -434,10 +436,12 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .cocktail-card:hover .cocktail-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .cocktail-overlay {
