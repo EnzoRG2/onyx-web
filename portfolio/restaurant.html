@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Table Dorée - Restaurant Festif & Gastronomique</title>
+    <title>Le Festin d'Or - Restaurant Festif & Gastronomique</title>
     <link rel="stylesheet" href="restaurant-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>La Table Dorée</h2>
+                <h2>Le Festin d'Or</h2>
                 <span class="tagline">Gastronomie & Festivités</span>
             </div>
             <ul class="nav-menu">
@@ -244,7 +244,7 @@
                         <div class="menu-item">
                             <div class="menu-item-info">
                                 <h3>Cocktail Signature</h3>
-                                <p>La Table Dorée - Gin, citron, sirop de violette</p>
+                                <p>Le Festin d'Or - Gin, citron, sirop de violette</p>
                             </div>
                             <div class="menu-item-price">14€</div>
                         </div>
@@ -372,7 +372,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Terrasse">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Dessert">
                     <div class="gallery-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -412,49 +412,12 @@
                         </div>
                     </div>
                 </div>
-                <form class="reservation-form">
-                    <h3>Formulaire de Réservation</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Votre email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="tel" placeholder="Téléphone" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" placeholder="Nombre de personnes" min="1" max="20" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="date" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Heure</option>
-                                <option value="12:00">12:00</option>
-                                <option value="12:30">12:30</option>
-                                <option value="13:00">13:00</option>
-                                <option value="13:30">13:30</option>
-                                <option value="19:00">19:00</option>
-                                <option value="19:30">19:30</option>
-                                <option value="20:00">20:00</option>
-                                <option value="20:30">20:30</option>
-                                <option value="21:00">21:00</option>
-                                <option value="21:30">21:30</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Demandes spéciales (allergies, anniversaire, etc.)" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Confirmer la réservation</button>
-                </form>
+                <div class="calendly-container">
+                    <h3>Réservez Votre Table en Ligne</h3>
+                    <p>Choisissez votre créneau directement via notre calendrier en ligne</p>
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/lefestindor/reservation" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                </div>
             </div>
         </div>
     </section>
