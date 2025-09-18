@@ -99,7 +99,19 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.nav-logo h2 {
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
     color: #D4AF37;
     font-size: 1.8rem;
     font-weight: 700;
@@ -699,6 +711,19 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
 
 .footer-section h3,
