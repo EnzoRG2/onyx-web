@@ -509,49 +509,75 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .option-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
     text-align: center;
     border: 2px solid #e5e7eb;
     transition: all 0.3s ease;
     position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .option-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: #d4af37;
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.option-card:hover::before {
+    opacity: 1;
 }
 
 .option-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, #d4af37, #f4d03f);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover .option-icon {
+    transform: scale(1.1);
 }
 
 .option-icon i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .option-card h4 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     font-weight: 600;
 }
 
 .option-price {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #d4af37;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
 .option-features {
@@ -561,18 +587,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .option-features li {
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
     color: #4b5563;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.option-features li:last-child {
+    border-bottom: none;
+}
+
+.option-features li:hover {
+    color: #000;
 }
 
 .option-features i {
-    color: #10b981;
-    font-size: 0.8rem;
+    color: #4CAF50;
+    font-size: 1rem;
+    filter: drop-shadow(0 0 5px rgba(76, 175, 80, 0.3));
 }
 
 .price {
