@@ -454,13 +454,42 @@
                     <div class="form-group">
                         <select id="typeProjet" required>
                             <option value="">Type de projet</option>
-                            <option value="vitrine">Site vitrine</option>
-                            <option value="landing">Landing page</option>
-                            <option value="restaurant">Restaurant</option>
-                            <option value="bar">Bar</option>
-                            <option value="gym">Salle de sport</option>
-                            <option value="autre">Autre</option>
+                            <option value="b2b">Site vitrine B2B</option>
+                            <option value="b2c">Site vitrine B2C</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="formule" required>
+                            <option value="">Formule choisie</option>
+                            <option value="basic">Basic - 690€</option>
+                            <option value="standard">Standard - 1200€</option>
+                            <option value="premium">Premium - 2100€</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Options supplémentaires :</label>
+                        <div class="options-checkboxes">
+                            <label class="option-checkbox">
+                                <input type="checkbox" value="domaine">
+                                <span class="checkmark"></span>
+                                Nom de domaine + Hébergement
+                            </label>
+                            <label class="option-checkbox">
+                                <input type="checkbox" value="chatbot">
+                                <span class="checkmark"></span>
+                                Chatbot intelligent (+ 150€ - 350€)
+                            </label>
+                            <label class="option-checkbox">
+                                <input type="checkbox" value="multilingue">
+                                <span class="checkmark"></span>
+                                Version multilingue (+ 200€)
+                            </label>
+                            <label class="option-checkbox">
+                                <input type="checkbox" value="maintenance">
+                                <span class="checkmark"></span>
+                                Maintenance & Support (+ 30€/mois)
+                            </label>
+                        </div>
                     </div>
                     <div class="form-group">
                         <textarea id="description" placeholder="Décrivez votre projet" rows="5"></textarea>
@@ -516,13 +545,35 @@
             const email = document.getElementById('email').value;
             const telephone = document.getElementById('telephone').value;
             const typeProjet = document.getElementById('typeProjet').value;
+            const formule = document.getElementById('formule').value;
             const description = document.getElementById('description').value;
             
+            // Récupérer les options sélectionnées
+            const options = [];
+            const checkboxes = document.querySelectorAll('.option-checkbox input[type="checkbox"]:checked');
+            checkboxes.forEach(checkbox => {
+                const label = checkbox.parentElement.textContent.trim();
+                options.push(label);
+            });
+            
             // Créer l'objet du mail
-            const objet = `${nom} - ${typeProjet}`;
+            const objet = `${nom} - ${typeProjet} - ${formule}`;
             
             // Créer le contenu du mail
-            const contenu = `${description}\n\nTéléphone: ${telephone}`;
+            let contenu = `${description}\n\n`;
+            contenu += `Formule choisie: ${formule}\n\n`;
+            
+            if (options.length > 0) {
+                contenu += `Options sélectionnées:\n`;
+                options.forEach(option => {
+                    contenu += `• ${option}\n`;
+                });
+                contenu += `\n`;
+            } else {
+                contenu += `Options: Aucune option sélectionnée\n\n`;
+            }
+            
+            contenu += `Téléphone: ${telephone}`;
             
             // Encoder les paramètres pour l'URL
             const objetEncode = encodeURIComponent(objet);
