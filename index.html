@@ -441,18 +441,18 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Votre nom" required>
+                        <input type="text" id="nom" placeholder="Votre nom" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Votre email" required>
+                        <input type="email" id="email" placeholder="Votre email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Votre téléphone">
+                        <input type="tel" id="telephone" placeholder="Votre téléphone">
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select id="typeProjet" required>
                             <option value="">Type de projet</option>
                             <option value="vitrine">Site vitrine</option>
                             <option value="landing">Landing page</option>
@@ -463,7 +463,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Décrivez votre projet" rows="5"></textarea>
+                        <textarea id="description" placeholder="Décrivez votre projet" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
                 </form>
@@ -508,5 +508,32 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nom = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+            const telephone = document.getElementById('telephone').value;
+            const typeProjet = document.getElementById('typeProjet').value;
+            const description = document.getElementById('description').value;
+            
+            // Créer l'objet du mail
+            const objet = `${nom} - ${typeProjet}`;
+            
+            // Créer le contenu du mail
+            const contenu = `${description}\n\nTéléphone: ${telephone}`;
+            
+            // Encoder les paramètres pour l'URL
+            const objetEncode = encodeURIComponent(objet);
+            const contenuEncode = encodeURIComponent(contenu);
+            
+            // Créer le lien mailto
+            const mailtoLink = `mailto:onyxweb.contact@gmail.com?subject=${objetEncode}&body=${contenuEncode}`;
+            
+            // Ouvrir le client de messagerie
+            window.location.href = mailtoLink;
+        });
+    </script>
 </body>
 </html>
