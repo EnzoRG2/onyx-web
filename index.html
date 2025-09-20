@@ -443,20 +443,20 @@
                 </div>
                 <form class="contact-form" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="nom" placeholder="Votre nom ou entreprise" required>
+                        <input type="text" id="nom" placeholder="Votre nom ou entreprise">
                     </div>
                     <div class="form-group">
                         <input type="tel" id="telephone" placeholder="Votre téléphone">
                     </div>
                     <div class="form-group">
-                        <select id="typeProjet" required>
+                        <select id="typeProjet">
                             <option value="">Type de projet</option>
                             <option value="b2b">Site vitrine B2B</option>
                             <option value="b2c">Site vitrine B2C</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <select id="formule" required>
+                        <select id="formule">
                             <option value="">Formule choisie</option>
                             <option value="basic">Basic - 690€</option>
                             <option value="standard">Standard - 1200€</option>
@@ -543,6 +543,27 @@
             const typeProjet = document.getElementById('typeProjet').value;
             const formule = document.getElementById('formule').value;
             const description = document.getElementById('description').value;
+            
+            // Validation des champs obligatoires
+            if (!nom.trim()) {
+                alert("Veuillez entrer votre nom ou entreprise");
+                return;
+            }
+            
+            if (!typeProjet) {
+                alert("Veuillez sélectionner un type de projet");
+                return;
+            }
+            
+            if (!formule) {
+                alert("Veuillez sélectionner une formule");
+                return;
+            }
+            
+            if (!description.trim()) {
+                alert("Veuillez décrire votre projet");
+                return;
+            }
             
             // Validation du numéro de téléphone
             const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
