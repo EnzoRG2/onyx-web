@@ -575,15 +575,20 @@
             
             contenu += `Téléphone: ${telephone}`;
             
-            // Encoder les paramètres pour l'URL
-            const objetEncode = encodeURIComponent(objet);
-            const contenuEncode = encodeURIComponent(contenu);
+            // Afficher un message de confirmation
+            const confirmation = confirm("Vérifiez bien votre demande avant l'envoi. Voulez-vous continuer ?");
             
-            // Créer le lien mailto
-            const mailtoLink = `mailto:onyxweb.contact@gmail.com?subject=${objetEncode}&body=${contenuEncode}`;
-            
-            // Ouvrir le client de messagerie
-            window.location.href = mailtoLink;
+            if (confirmation) {
+                // Encoder les paramètres pour l'URL
+                const objetEncode = encodeURIComponent(objet);
+                const contenuEncode = encodeURIComponent(contenu);
+                
+                // Créer le lien mailto
+                const mailtoLink = `mailto:onyxweb.contact@gmail.com?subject=${objetEncode}&body=${contenuEncode}`;
+                
+                // Ouvrir le client de messagerie
+                window.location.href = mailtoLink;
+            }
         });
     </script>
 </body>
