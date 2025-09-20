@@ -753,6 +753,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     position: relative;
     padding-left: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .option-checkbox input[type="checkbox"] {
@@ -761,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-.checkmark {
+.option-checkbox .checkmark {
     position: absolute;
     left: 0;
     top: 50%;
@@ -772,6 +773,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid #d4af37;
     border-radius: 4px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .option-checkbox:hover .checkmark {
@@ -784,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #d4af37;
 }
 
-.checkmark:after {
+.option-checkbox .checkmark:after {
     content: "✓";
     position: absolute;
     display: none;
@@ -798,6 +800,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .option-checkbox input:checked ~ .checkmark:after {
     display: block;
+}
+
+.option-checkbox span {
+    margin-left: 0.5rem;
+    cursor: pointer;
 }
 
 .form-group select option {

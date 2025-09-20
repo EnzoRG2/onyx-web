@@ -466,26 +466,26 @@
                     <div class="form-group">
                         <label>Options supplémentaires :</label>
                         <div class="options-checkboxes">
-                            <label class="option-checkbox">
-                                <input type="checkbox" value="domaine">
-                                <span class="checkmark"></span>
-                                Nom de domaine + Hébergement
-                            </label>
-                            <label class="option-checkbox">
-                                <input type="checkbox" value="chatbot">
-                                <span class="checkmark"></span>
-                                Chatbot intelligent (+ 150€ - 350€)
-                            </label>
-                            <label class="option-checkbox">
-                                <input type="checkbox" value="multilingue">
-                                <span class="checkmark"></span>
-                                Version multilingue (+ 200€)
-                            </label>
-                            <label class="option-checkbox">
-                                <input type="checkbox" value="maintenance">
-                                <span class="checkmark"></span>
-                                Maintenance & Support (+ 30€/mois)
-                            </label>
+                            <div class="option-checkbox">
+                                <input type="checkbox" id="domaine" value="domaine">
+                                <label for="domaine" class="checkmark"></label>
+                                <span>Nom de domaine + Hébergement</span>
+                            </div>
+                            <div class="option-checkbox">
+                                <input type="checkbox" id="chatbot" value="chatbot">
+                                <label for="chatbot" class="checkmark"></label>
+                                <span>Chatbot intelligent (+ 150€ - 350€)</span>
+                            </div>
+                            <div class="option-checkbox">
+                                <input type="checkbox" id="multilingue" value="multilingue">
+                                <label for="multilingue" class="checkmark"></label>
+                                <span>Version multilingue (+ 200€)</span>
+                            </div>
+                            <div class="option-checkbox">
+                                <input type="checkbox" id="maintenance" value="maintenance">
+                                <label for="maintenance" class="checkmark"></label>
+                                <span>Maintenance & Support (+ 30€/mois)</span>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -555,8 +555,10 @@
             const options = [];
             const checkboxes = document.querySelectorAll('.option-checkbox input[type="checkbox"]:checked');
             checkboxes.forEach(checkbox => {
-                const label = checkbox.parentElement.textContent.trim();
-                options.push(label);
+                const span = checkbox.parentElement.querySelector('span');
+                if (span) {
+                    options.push(span.textContent.trim());
+                }
             });
             
             // Créer l'objet du mail
