@@ -544,23 +544,35 @@
             const formule = document.getElementById('formule').value;
             const description = document.getElementById('description').value;
             
+            // Debug: afficher les valeurs
+            console.log("Nom:", nom);
+            console.log("Téléphone:", telephone);
+            console.log("Type projet:", typeProjet);
+            console.log("Formule:", formule);
+            console.log("Description:", description);
+            
             // Validation des champs obligatoires
-            if (!nom.trim()) {
+            if (!nom || !nom.trim()) {
                 alert("Veuillez entrer votre nom ou entreprise");
                 return;
             }
             
-            if (!typeProjet) {
+            if (!telephone || !telephone.trim()) {
+                alert("Veuillez entrer votre numéro de téléphone");
+                return;
+            }
+            
+            if (!typeProjet || typeProjet === "") {
                 alert("Veuillez sélectionner un type de projet");
                 return;
             }
             
-            if (!formule) {
+            if (!formule || formule === "") {
                 alert("Veuillez sélectionner une formule");
                 return;
             }
             
-            if (!description.trim()) {
+            if (!description || !description.trim()) {
                 alert("Veuillez décrire votre projet");
                 return;
             }
