@@ -441,7 +441,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm" novalidate>
+                <div class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="nom" placeholder="Votre nom ou entreprise">
                     </div>
@@ -491,8 +491,8 @@
                     <div class="form-group">
                         <textarea id="description" placeholder="Décrivez votre projet" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
-                </form>
+                    <button type="button" id="submitBtn" class="btn btn-primary">Envoyer ma demande</button>
+                </div>
             </div>
         </div>
     </section>
@@ -535,7 +535,7 @@
 
     <script src="script.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('submitBtn').addEventListener('click', function(e) {
             e.preventDefault();
             
             const nom = document.getElementById('nom').value;
