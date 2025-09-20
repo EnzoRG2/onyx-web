@@ -548,6 +548,13 @@
             const formule = document.getElementById('formule').value;
             const description = document.getElementById('description').value;
             
+            // Validation du numéro de téléphone
+            const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+            if (!phoneRegex.test(telephone)) {
+                alert("Veuillez entrer un numéro de téléphone français valide (ex: 06 12 34 56 78 ou +33 6 12 34 56 78)");
+                return;
+            }
+            
             // Récupérer les options sélectionnées
             const options = [];
             const checkboxes = document.querySelectorAll('.option-checkbox input[type="checkbox"]:checked');
@@ -575,20 +582,15 @@
             
             contenu += `Téléphone: ${telephone}`;
             
-            // Afficher un message de confirmation
-            const confirmation = confirm("Vérifiez bien votre demande avant l'envoi. Voulez-vous continuer ?");
+            // Encoder les paramètres pour l'URL
+            const objetEncode = encodeURIComponent(objet);
+            const contenuEncode = encodeURIComponent(contenu);
             
-            if (confirmation) {
-                // Encoder les paramètres pour l'URL
-                const objetEncode = encodeURIComponent(objet);
-                const contenuEncode = encodeURIComponent(contenu);
-                
-                // Créer le lien mailto
-                const mailtoLink = `mailto:onyxweb.contact@gmail.com?subject=${objetEncode}&body=${contenuEncode}`;
-                
-                // Ouvrir le client de messagerie
-                window.location.href = mailtoLink;
-            }
+            // Créer le lien mailto
+            const mailtoLink = `mailto:onyxweb.contact@gmail.com?subject=${objetEncode}&body=${contenuEncode}`;
+            
+            // Ouvrir le client de messagerie
+            window.location.href = mailtoLink;
         });
     </script>
 </body>
